@@ -16,6 +16,9 @@ public class TextNote extends Note {
 	public String getContent() {
 		return content;
 	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 	public String getTextFromFile(String absolutePath) {
 		String result = "";
 		FileInputStream fis = null;

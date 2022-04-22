@@ -33,6 +33,13 @@ public class NoteBook implements Serializable {
 		}
 	}
 	
+	public void addFolder(String folderName) {
+		for(Folder f: folders) {
+			if(f.getName() == folderName) return;
+		}
+		folders.add(new Folder(folderName));
+	}
+	
 	public boolean createTextNote(String folderName, String title, String content) {
 		TextNote note = new TextNote(title, content);
 		return insertNote(folderName, note);
